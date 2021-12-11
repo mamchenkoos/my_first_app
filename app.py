@@ -1,6 +1,6 @@
 import json
 from flask import Flask, request
-from middleware.auth import AuthorizationMiddle
+from auth import AuthorizationMiddle
 
 app = Flask(__name__)
 app.wsgi_app = AuthorizationMiddle(app.wsgi_app)
